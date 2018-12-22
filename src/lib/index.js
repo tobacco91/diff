@@ -1,4 +1,3 @@
-import { append,toArray } from '../utils/index.js';
 import virtualTree from '../virtual-dom/createVirtualTree.js';
 import  mountElement from '../virtual-dom/createNode.js';
 import diff from '../virtual-dom/diff.js';
@@ -10,17 +9,14 @@ class Lib {
       this[key] = component[key]
     }
     this.setState = this.setState;
-    this.prevTree = {};
+    this.prevTree = virtualTree(this.setHTML().replace(/[\r\n]+/g,""),this.component);
     this.nextTree = {};
     this.render();
   }
   render() {
     typeof this.componentWillMount === 'function' && this.componentWillMount();
-    this.prevTree = virtualTree(this.setHTML().replace(/[\r\n]+/g,""),this.component);
-    // this.parent.innerHTML = '';
     this.parent.appendChild(mountElement(this.prevTree));
     typeof this.componentDidMount === 'function' && this.componentDidMount();
-
   }
 
   reset() {
@@ -28,8 +24,7 @@ class Lib {
     const res = diff(this.prevTree,this.nextTree)
     console.log(res)
     patch(this.parent,res);
-    // this.parent.innerHTML = '';
-    // this.parent.appendChild(mountElement(this.nextTree));
+    this.prevTree = this.nextTree;
   }
 
   setState(args) {

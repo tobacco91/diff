@@ -6,16 +6,11 @@ let parent = registerComponent('parent',{
     data: 'data',
     // time: '2018.01.12'
   },
-  // componentDidMount: function() {
-  //   this.setState({
-  //     data: '100'
-  //   })
-  // },
+  
   componentDidMount: function() {
-
-    // parent.setState({
-    //   data: 'will'
-    // })
+    this.setState({
+      data: 'will'
+    })
   },
   change: function() {
 
