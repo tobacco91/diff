@@ -4,7 +4,7 @@ import {append} from './utils/index.js';
 let parent = registerComponent('parent',{
   state: {
     data: 'data',
-    time: '2018.01.12'
+    // time: '2018.01.12'
   },
   // componentDidMount: function() {
   //   this.setState({
