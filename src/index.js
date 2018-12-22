@@ -12,7 +12,7 @@ let parent = registerComponent('parent',{
   //   })
   // },
   componentDidMount: function() {
-    console.log(parent)
+
     // parent.setState({
     //   data: 'will'
     // })
