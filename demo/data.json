@@ -1,0 +1,100 @@
+[{
+  "title": "ECS计算网络增强型",
+  "description1": "cpu与内存配比1：2",
+  "description2":"计算性能稳定，超高网络PPS",
+  "bandwidth": "1M",
+  "cloudDisk": "40G",
+  "type": [{
+    "cpu":"2核",
+    "memory":"4G",
+    "other":{
+
+      "price": "2106",
+      "discount":"702"
+    }
+  },{
+    "cpu":"4核",
+    "memory":"8G",
+    "other":{
+      "bandwidth": "1M",
+      "cloudDisk": "40G",
+      "price": "3879",
+      "discount":"1293"
+    }
+  },{
+    "cpu":"8核",
+    "memory":"16G",
+    "other":{
+      "bandwidth": "1M",
+      "cloudDisk": "40G",
+      "price": "7425",
+      "discount":"2475"
+    }
+  }]
+},{
+  "title": "ECS计算网络增强型1",
+  "description1": "cpu与内存配比1：2",
+  "description2":"计算性能稳定，超高网络PPS",
+  "bandwidth": "1M",
+  "cloudDisk": "40G",
+  "type": [{
+    "cpu":"2核",
+    "memory":"4G",
+    "other":{
+
+      "price": "2106",
+      "discount":"702"
+    }
+  },{
+    "cpu":"4核",
+    "memory":"8G",
+    "other":{
+      "bandwidth": "1M",
+      "cloudDisk": "40G",
+      "price": "3879",
+      "discount":"1293"
+    }
+  },{
+    "cpu":"8核",
+    "memory":"16G",
+    "other":{
+      "bandwidth": "1M",
+      "cloudDisk": "40G",
+      "price": "7425",
+      "discount":"2475"
+    }
+  }]
+},{
+  "title": "ECS计算网络增强型2",
+  "description1": "cpu与内存配比1：2",
+  "description2":"计算性能稳定，超高网络PPS",
+  "bandwidth": "1M",
+  "cloudDisk": "40G",
+  "type": [{
+    "cpu":"2核",
+    "memory":"4G",
+    "other":{
+
+      "price": "2106",
+      "discount":"702"
+    }
+  },{
+    "cpu":"4核",
+    "memory":"8G",
+    "other":{
+      "bandwidth": "1M",
+      "cloudDisk": "40G",
+      "price": "3879",
+      "discount":"1293"
+    }
+  },{
+    "cpu":"8核",
+    "memory":"16G",
+    "other":{
+      "bandwidth": "1M",
+      "cloudDisk": "40G",
+      "price": "7425",
+      "discount":"2475"
+    }
+  }]
+}]

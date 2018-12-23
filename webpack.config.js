@@ -1,22 +1,43 @@
+var path = require('path');
+const webpack=require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
-  entry: './src/index.js',
+  entry: './demo/index',
   output: {
-    path: './build/js',
-    filename: 'index.js'
+    publicPath:'/',
+    path: path.resolve(__dirname, './dist'),
+    filename: 'bundle.js'
+  },
+  devServer:{
+    host: '192.168.0.102',
+    contentBase: path.resolve(__dirname, './dist'),
+    port:'8080',
+    open:true,//自动拉起浏览器
+    hot:true,//热加载
+    historyApiFallback: true,
+    disableHostCheck: true
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
-        loader: 'babel',
-        query: {
-          presets: ['es2015'],
-          plugins: ['transform-class-properties']
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader"
         }
+      },{
+        test: /\.less$/,
+        exclude: /node_modules/,
+        use:['style-loader', 'css-loader', 'less-loader']
+
       }
     ]
   },
-  resolve: {
-    extensions: ['', '.js', '.json']
-  }
+  plugins:[
+  //热更新插件
+      new webpack.HotModuleReplacementPlugin(),
+      new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, './dist/index.html'),
+      }),
+  ]
 }

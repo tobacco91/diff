@@ -4,6 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+  <title>card</title>
+</head>
+<body>
+
+  <div id="root"></div>
+
   <script>
     var deviceWidth;
     window.addEventListener('resize', function () {
@@ -11,23 +19,10 @@
     }, false)
     function setFontSize() {
         deviceWidth = document.documentElement.clientWidth > 1400 ? 1400 : document.documentElement.clientWidth
-        document.getElementsByTagName('html')[0].style.cssText = 'font-size:' + deviceWidth / 14 + 'px !important'
+        document.getElementsByTagName('html')[0].style.fontSize = deviceWidth / 14 + 'px';
     }
     setFontSize()
   </script>
-  <style>
-    .red {
-      height: 2rem;
-      width: 2rem;
-      background-color: blue;
-    }
-  </style>
-  <title>card</title>
-</head>
-<body>
-  <div class="red"></div>
-  <div id="root"></div>
-  <script src="http://localhost:8080/webpack-dev-server.js"></script>
-  <script src="./index.js"></script>
+<script type="text/javascript" src="./bundle.js"></script>
 </body>
 </html>

@@ -22,6 +22,7 @@ class Lib {
   reset() {
     this.nextTree = virtualTree(this.setHTML().replace(/[\r\n]+/g,""),this.component);
     const res = diff(this.prevTree,this.nextTree)
+    // console.log(this.prevTree,this.nextTree)
     console.log(res)
     patch(this.parent,res);
     this.prevTree = this.nextTree;

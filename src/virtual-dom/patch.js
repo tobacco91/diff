@@ -1,6 +1,7 @@
 import createNode from './createNode.js';
 import {setProps,setProp,removeProp } from './dom.js';
 export default function patch(parent, diff, i = 0) {
+  if(!diff) return;
   const node = parent.childNodes[i];
   if(diff.type === 'CREATE') {
     parent.appendChild(createNode(diff.node))
